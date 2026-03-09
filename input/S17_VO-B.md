@@ -1,0 +1,1 @@
+When I ask a question, the system routes it: graph, documents, or both. It pulls evidence through safe, read-only pathways, synthesizes an answer with evidence and confidence, and if it makes sense, it can propose a graph delta for the canvas that I can accept or discard.

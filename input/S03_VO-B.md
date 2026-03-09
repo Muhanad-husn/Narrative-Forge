@@ -1,0 +1,1 @@
+Graphs let you pull those patterns into view by connecting people, organizations, events, and claims in a form you can actually inspect. So the question becomes: how do you get from messy documents to a graph you can actually use?

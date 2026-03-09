@@ -1,0 +1,1 @@
+This is a real working prototype built over roughly fourteen months, and it still has limitations. Right now it supports English only and is designed to run on CPU. But the architecture can grow into more languages, SaaS deployment, and custom server or on-prem GPU setups. The public code is under a noncommercial license, and commercial use needs a separate arrangement.

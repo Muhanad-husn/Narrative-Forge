@@ -1,0 +1,1 @@
+Extraction creates a first-pass graph. Trust is earned in the next step: curation.

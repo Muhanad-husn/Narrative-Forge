@@ -1,0 +1,1 @@
+Privacy by architecture matters here too, because the source material stays under your control instead of disappearing into some vague external pipeline. If this is real analytical work, it also has to be resumable and reviewable.

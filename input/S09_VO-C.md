@@ -1,0 +1,1 @@
+The schema becomes the contract. AI expands the options, but the user decides the structure. Once locked, the system works inside those boundaries. Once the contract is set, document handling becomes the next determinant of quality.

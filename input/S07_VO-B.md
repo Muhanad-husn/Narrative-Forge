@@ -1,0 +1,1 @@
+That is the problem Neo4all is built to solve. So Neo4all begins by establishing a governed run, not a casual chat session.

@@ -1,0 +1,1 @@
+The point is reproducibility: a setup a serious user can repeat without turning this into a long onboarding detour. With setup out of the way, we'll use one shared investigation-style dataset across both apps.

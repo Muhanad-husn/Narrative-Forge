@@ -1,0 +1,1 @@
+The point is persistence and repeatability from the start. Before any extraction happens, the human defines the rules of the world.

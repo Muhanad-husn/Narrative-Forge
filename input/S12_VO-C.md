@@ -1,0 +1,1 @@
+The AI is not writing Cypher, and it is not mutating the graph directly. AI assists, humans decide.

@@ -1,0 +1,1 @@
+Graph evidence and document evidence reinforce each other. The answer is never without its grounding.

@@ -1,0 +1,1 @@
+At that point, Neo4all has done its job: the graph is no longer just extracted, it's governed.

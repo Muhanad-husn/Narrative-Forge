@@ -1,0 +1,54 @@
+{
+  "project": {
+    "name": "example-storyboard",
+    "model": "google/gemini-3.1-flash-image-preview",
+    "aspect_ratio": "16:9",
+    "target_resolution": "1920x1080",
+    "draft_candidates_per_asset": 1,
+    "output_dir": "../../artifacts/image/outputs",
+    "prompt_log_dir": "../../artifacts/image/prompts",
+    "review_dir": "../../artifacts/image/review",
+    "composite_dir": "../../artifacts/image/composites"
+  },
+  "global_style": {
+    "style_preamble": "Editorial technical illustration on dark graphite backgrounds. Restrained, clear, documentary, matte surfaces, no neon or sci-fi effects."
+  },
+  "colors": {
+    "background": {
+      "term": "dark graphite",
+      "hex_range": ["#2D2D2D", "#3A3A3A"]
+    }
+  },
+  "rules": {
+    "crimson_usage": {
+      "allowed_assets": ["IMG-EX-02"]
+    }
+  },
+  "assets": [
+    {
+      "asset_id": "IMG-EX-01",
+      "prompt_body": "A clean investigation workspace made of abstract document panels and muted teal links, showing information being organized into a readable structure.",
+      "negative_prompt": "Readable text, stock photo office, neon, glossy 3D, glowing AI brain.",
+      "notes": [],
+      "accent_policy": {
+        "teal": true,
+        "amber": false,
+        "crimson": false
+      },
+      "manual_review_required": false
+    },
+    {
+      "asset_id": "IMG-EX-02",
+      "prompt_body": "A split comparison scene where the left side shows broken context with soft crimson warning markers and the right side shows a calmer corrected structure with muted teal cues.",
+      "negative_prompt": "Readable text, emoji warnings, bright red, 3D renders, sci-fi interface.",
+      "notes": [],
+      "accent_policy": {
+        "teal": true,
+        "amber": false,
+        "crimson": true
+      },
+      "manual_review_required": false
+    }
+  ],
+  "batch_order": ["IMG-EX-01", "IMG-EX-02"]
+}
