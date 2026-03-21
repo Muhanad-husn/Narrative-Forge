@@ -1,1 +1,0 @@
-If you're an investor or a potential client, my contact details are in the description.

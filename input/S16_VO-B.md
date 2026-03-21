@@ -1,1 +1,0 @@
-Visual and spatial reasoning are not the same thing as chat summaries, especially for journalists, researchers, and OSINT investigators trying to hold multiple threads in view at once. G-Lap has to be useful before AI enters the scene, or the design is wrong.

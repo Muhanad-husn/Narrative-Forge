@@ -19,8 +19,9 @@ DEFAULT_TTS_MODEL = "gpt-4o-mini-tts"
 DEFAULT_VOICE = "onyx"
 TARGET_SAMPLE_RATE = 48_000
 TARGET_PEAK_DBFS = -3.0
+PARAGRAPH_PAUSE_SECONDS = 2
 TARGET_LUFS = -18.0
-LEAD_IN_SECONDS = 0.5
+LEAD_IN_SECONDS = 1.2
 TAIL_SECONDS = 1.0
 MAX_TTS_INPUT_TOKENS = 2000
 TOKEN_SAFETY_MARGIN = 100
@@ -374,7 +375,16 @@ def synthesize_markdown_file(
             samples, sample_rate = post_process_wav_chunk(response.content, add_edge_silence=False)
             chunk_samples.append(samples)
 
-        combined = np.concatenate(chunk_samples) if len(chunk_samples) > 1 else chunk_samples[0]
+        if len(chunk_samples) > 1:
+            pause = np.zeros(int(TARGET_SAMPLE_RATE * PARAGRAPH_PAUSE_SECONDS), dtype=np.float32)
+            parts: list[np.ndarray] = []
+            for i, cs in enumerate(chunk_samples):
+                if i > 0:
+                    parts.append(pause)
+                parts.append(cs)
+            combined = np.concatenate(parts)
+        else:
+            combined = chunk_samples[0]
         sf.write(output_path, add_required_silence(combined), sample_rate, subtype="PCM_24")
 
         transcript_text = transcribe_audio_file(client, output_path)

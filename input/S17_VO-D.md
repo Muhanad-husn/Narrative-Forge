@@ -1,1 +1,0 @@
-The graph delta is previewed first. The user accepts or discards it. The graph connection remains read-only. And the moment that becomes most valuable is when graph evidence meets source documents.

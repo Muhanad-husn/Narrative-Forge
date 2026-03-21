@@ -1,0 +1,134 @@
+{
+  "project": {
+    "name": "storyboard-visuals-batch3-replacements",
+    "model": "google/gemini-3.1-flash-image-preview",
+    "aspect_ratio": "16:9",
+    "target_resolution": "1920x1080",
+    "draft_candidates_per_asset": 1,
+    "total_assets": 2,
+    "output_dir": "image/outputs",
+    "prompt_log_dir": "image/prompts/rendered_prompts",
+    "review_dir": "image/review",
+    "composite_dir": "image/composites"
+  },
+  "global_style": {
+    "style_preamble": "Editorial investigative product-film aesthetic. Dark graphite background (#2D2D2D). Clean modern sans-serif typography. Restrained, serious, trustworthy. No neon, no particle effects, no glowing AI brains, no stock-photo energy. Flat matte surfaces, soft directional lighting, subtle depth-of-field. Color accents only where specified. 16:9 aspect ratio, 1920x1080.",
+    "document_tone": "editorial documentary",
+    "surface_style": "flat matte",
+    "forbidden_motifs": [
+      "glowing AI brains",
+      "neural network imagery",
+      "particle effects",
+      "startup ad aesthetic",
+      "sci-fi aesthetic",
+      "saas marketing look"
+    ]
+  },
+  "colors": {
+    "background": {
+      "term": "dark graphite / charcoal",
+      "hex_range": [
+        "#2D2D2D",
+        "#3A3A3A"
+      ]
+    },
+    "text": {
+      "term": "soft off-white / warm white",
+      "hex_range": [
+        "#F0EDE8",
+        "#FAFAFA"
+      ]
+    },
+    "panels": {
+      "term": "slate blue / steel blue",
+      "hex_range": [
+        "#4A6274",
+        "#5B7A8A"
+      ]
+    },
+    "ai": {
+      "term": "muted teal",
+      "hex_range": [
+        "#5A9E9E",
+        "#6BB5B5"
+      ]
+    },
+    "governance": {
+      "term": "warm amber",
+      "hex_range": [
+        "#D4A843",
+        "#E8B84D"
+      ]
+    },
+    "risk": {
+      "term": "soft crimson",
+      "hex_range": [
+        "#C25B5B",
+        "#D46A6A"
+      ]
+    }
+  },
+  "rules": {
+    "background_range_required": true,
+    "no_readable_text": true,
+    "allow_real_text_overlay_only": true,
+    "no_glossy_3d": true,
+    "no_ai_magic": true,
+    "editorial_documentary_tone": true,
+    "founder_not_heroic": true,
+    "teal_usage": "AI / active pathways only",
+    "amber_usage": "governance / approval / human checkpoint only",
+    "crimson_usage": {
+      "meaning": "risk / conflict / problem only",
+      "allowed_assets": [
+        "IMG-S13-A"
+      ]
+    }
+  },
+  "assets": [
+    {
+      "asset_id": "IMG-S03-A",
+      "slide": 5,
+      "section": "S03 - Why graph networks matter",
+      "subject": "Multi-domain graph clusters",
+      "pattern_family": "graph_clusters",
+      "prompt_body": "Wide composition on dark graphite background. Four distinct small graph clusters arranged loosely across the frame, each representing a different domain where graph structure reveals patterns. Top-left cluster: an ownership network with 5 to 6 off-white rectangular nodes connected vertically by muted teal lines, suggesting a corporate parent-child chain, with subtle size differences implying hierarchy. Top-right cluster: an investigation web with 7 to 8 off-white circular nodes connected laterally by muted teal lines, suggesting connections between people, organizations, and events, with some lines crossing to imply hidden relationships. Bottom-left cluster: a biological network with 5 to 6 off-white diamond-shaped nodes connected by branching muted teal lines, suggesting a molecular or pathway structure. Bottom-right cluster: an influence network with one larger central off-white node and muted teal lines radiating to 6 to 7 smaller peripheral nodes, suggesting a hub-and-spoke communication pattern. Below each cluster, a small off-white sans-serif label: Ownership, Investigations, Biology, Influence. The clusters are generously spaced with dark graphite breathing room between them. Each cluster is distinct in topology, chain versus web versus branch versus hub, but unified by the same muted teal line treatment and off-white node style. No documents anywhere in the image. No transformation arrow. The message is that graphs are a universal lens, not a single trick. Quiet breadth, many domains, one structural principle.",
+      "negative_prompt": "Document fragments, PDF pages, transformation arrows, before and after layout, left-to-right flow, glowing nodes, 3D renders, detailed scientific diagrams, dense academic graph visualizations, literal photographs, stock imagery, any single domain dominating the composition, bright colors beyond teal accents, neon effects.",
+      "notes": [
+        "Replacement for the older doc-to-graph image. There must be no documents in frame at all.",
+        "The four clusters should feel like independent examples, not one connected network."
+      ],
+      "overlay_zones": [],
+      "accent_policy": {
+        "teal": true,
+        "amber": false,
+        "crimson": false
+      },
+      "manual_review_required": false
+    },
+    {
+      "asset_id": "IMG-S13-A",
+      "slide": 28,
+      "section": "S13 - Neo4all takeaway",
+      "subject": "Governed graph with trust markers",
+      "pattern_family": "governed_graph_divider",
+      "prompt_body": "Wide composition on dark graphite background with a clear vertical divider at center. Left half: a dim, desaturated, disordered scene with document fragments and abstract text blocks in very low-contrast gray, overlapping haphazardly, slightly rotated and misaligned. Some fragments have faint soft crimson accent marks on their edges, subtle red flags suggesting unverified, unreliable data. The left side feels heavy, murky, and untrustworthy. No structure, no connections. Right half: a clean, bright, governed graph network. Off-white circular nodes connected by muted teal lines in a clear, readable layout with intentional spacing. At 4 to 5 key junction points in the graph, small warm amber diamond badges sit on the connection lines as governance checkpoints and approval markers where a human reviewed and confirmed. Two or three nodes have a thin amber outline ring instead of plain white, marking them as verified or curated. Below the graph, a faint amber horizontal bar suggests an audit trail or activity log as texture only, never readable text. The overall contrast is stark: left side broken and dim, right side structured and lit. The divider is a subtle gradient fade, not a hard line. The message is that this graph is not just organized, it is governed. Every connection was reviewed. Earned trust, quiet confidence.",
+      "negative_prompt": "Identical composition to IMG-S01-B, teal lines pulling documents into graph, transformation arrows, left-to-right flow motion, glowing effects, neon colors, particle effects, AI brain imagery, 3D renders, celebratory energy, document fragments on the right side, any suggestion the transformation was instant or automatic.",
+      "notes": [
+        "Replacement for the older before-and-after image. The critical differentiator is the amber governance markers on the right-side graph.",
+        "The left side should feel more broken and untrustworthy than simple clutter."
+      ],
+      "overlay_zones": [],
+      "accent_policy": {
+        "teal": true,
+        "amber": true,
+        "crimson": true
+      },
+      "manual_review_required": false
+    }
+  ],
+  "batch_order": [
+    "IMG-S03-A",
+    "IMG-S13-A"
+  ]
+}

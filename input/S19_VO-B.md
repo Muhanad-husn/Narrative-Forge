@@ -1,1 +1,0 @@
-That is what turns a useful workspace into something professionals can rely on over time. That brings us to the real takeaway of the whole system.

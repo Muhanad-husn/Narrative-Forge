@@ -1,1 +1,0 @@
-With the documents prepared properly, extraction can now happen inside those human-defined boundaries.

@@ -1,1 +1,0 @@
-So the investigation begins with the graph itself, not with AI.

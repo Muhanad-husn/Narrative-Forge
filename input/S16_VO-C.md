@@ -1,1 +1,0 @@
-Now that the canvas is established, the optional Copilot makes sense.

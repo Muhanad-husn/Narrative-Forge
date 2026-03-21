@@ -1,1 +1,0 @@
-In plain language, better document handling gives you better evidence access later, better relationship grounding, and a graph you can trust more. This is not a RAG lecture. It is just one practical reason the downstream graph holds up better.

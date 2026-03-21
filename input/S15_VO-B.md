@@ -1,1 +1,0 @@
-New users can start with the canvas and unlock more later. Once you're oriented, the canvas becomes the main cognitive workspace.
