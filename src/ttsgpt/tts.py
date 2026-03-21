@@ -19,9 +19,9 @@ DEFAULT_TTS_MODEL = "gpt-4o-mini-tts"
 DEFAULT_VOICE = "onyx"
 TARGET_SAMPLE_RATE = 48_000
 TARGET_PEAK_DBFS = -3.0
-PARAGRAPH_PAUSE_SECONDS = 2
+PARAGRAPH_PAUSE_SECONDS = 0.75
 TARGET_LUFS = -18.0
-LEAD_IN_SECONDS = 1.2
+LEAD_IN_SECONDS = 0.5
 TAIL_SECONDS = 1.0
 MAX_TTS_INPUT_TOKENS = 2000
 TOKEN_SAFETY_MARGIN = 100
@@ -153,18 +153,11 @@ def chunk_model_input(text: str, max_tokens: int) -> list[str]:
         return []
 
     chunks: list[str] = []
-    current = ""
     for paragraph in paragraphs:
-        candidate = f"{current}\n\n{paragraph}".strip() if current else paragraph
-        if current and estimate_tokens(candidate) > max_tokens:
-            chunks.append(current)
-            current = ""
         if estimate_tokens(paragraph) > max_tokens:
             chunks.extend(split_long_unit(paragraph, max_tokens))
         else:
-            current = f"{current}\n\n{paragraph}".strip() if current else paragraph
-    if current:
-        chunks.append(current)
+            chunks.append(paragraph)
     return chunks
 
 
