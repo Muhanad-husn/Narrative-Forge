@@ -16,7 +16,7 @@ from scipy.signal import resample_poly
 
 
 DEFAULT_TTS_MODEL = "gpt-4o-mini-tts"
-DEFAULT_VOICE = "onyx"
+DEFAULT_VOICE = "echo"
 TARGET_SAMPLE_RATE = 48_000
 TARGET_PEAK_DBFS = -3.0
 PARAGRAPH_PAUSE_SECONDS = 0.75
@@ -58,8 +58,12 @@ NUMBER_WORDS = {
     "ninety": 90,
 }
 DEFAULT_TTS_TONE = (
-    "Narrate with calm confidence, natural pacing, and fully articulated technical terms. "
-    "Stay human and grounded, not promotional or exaggerated."
+    "You are voicing A software tutorial. Speak as a clear, friendly product trainer "
+    "with light enthusiasm. Keep a steady, slightly brisk pace. Emphasize buttons, menu "
+    "names, feature names, and key outcomes. Pause briefly between steps and a little "
+    "longer before new sections. Pronounce technical terms carefully and consistently. "
+    "Sound engaging, confident, and easy to follow. Avoid sounding theatrical, overly "
+    "excited, or salesy."
 )
 
 
